@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body{
+    width:100%;
+    height:100vh;
+    padding:25px;
+    display:flex;
+    vertical-align: middle;
+    align-items: center;
+    background:hsl(0, 0%, 95%);
+}
+#mainBox{
+    margin:0 auto;
+    width:100%;
+    max-width:830px;
+    height:auto;
+    display:flex;
+}
+#mainBox section{
+    padding:40px;
+    display:flex;
+    flex-direction:column;
+}
+#mainBox section:nth-of-type(1){
+    background:hsl(31, 77%, 52%);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius:8px;
+}
+#mainBox section:nth-of-type(2){
+    background:hsl(184, 100%, 22%);
+}
+#mainBox section:nth-of-type(3){
+    background:hsl(179, 100%, 13%);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius:8px;
+}
+#mainBox i{
+    width:70px;
+    height:45px;
+    margin-bottom:25px;
+}
+.box-car-1 i{background:url("../img/icon-sedans.svg") no-repeat center center;}
+.box-car-2 i{background:url("../img/icon-suvs.svg") no-repeat center center;}
+.box-car-3 i{background:url("../img/icon-luxury.svg") no-repeat center center;}
+
+#mainBox hgroup h1{
+    color:hsl(0, 0%, 95%);
+    font-family:"Big Shoulders Display", cursive;
+    font-weight:700;
+    font-size:35px;
+    margin-bottom:25px;
+}
+#mainBox p{
+    color:hsla(0, 0%, 100%, 0.75);
+    font-size:15px;
+    font-family: 'Lexand Deca',sans-serif;
+    font-weight:400;
+    line-height:175%;
+    margin-bottom:50px;
+}
+#mainBox a{
+    background:hsl(0, 0%, 95%);
+    border-radius:50px;
+    font-size:15px;
+    padding:13px 30px;
+    display:flex;
+    width:fit-content;
+    text-decoration:none;
+    font-family: 'Lexand Deca',sans-serif;
+
+    transform:scale(1);
+
+    transition-duration:0.2s;
+    -webkit-transition-duration:0.2s;
+    -moz-transition-duration:0.2s;
+}
+#mainBox a:hover{transform:scale(1.1);}
+#mainBox section:nth-of-type(1) a{color:hsl(31, 77%, 52%);}
+#mainBox section:nth-of-type(2) a{color:hsl(184, 100%, 22%)}
+#mainBox section:nth-of-type(3) a{color:hsl(179, 100%, 13%);}
+
+@media screen and (max-width:730px){
+    body{height:auto;}
+    #mainBox{flex-direction:column;}
+    #mainBox section:nth-of-type(1){
+        border-top-left-radius: 8px;
+        border-top-right-radius:8px;
+        border-bottom-left-radius:0px;
+    }
+    #mainBox section:nth-of-type(3){
+        border-top-right-radius: 0px;
+        border-bottom-left-radius:8px;
+        border-bottom-right-radius:8px;
+    }
+}
